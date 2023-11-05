@@ -19,7 +19,7 @@
       </thead>
       <tbody>
         <tr class="tr__border-bottom" *ngFor="let plant of plants">
-          <td class="px-4">{{ plant.id }}</td>
+          <td class="px-4 fw-bold">{{ plant.id }}</td>
           <td class="px-4">{{ plant.nombre_comun }}</td>
           <td class="px-4">{{ plant.tipo }}</td>
           <td class="px-4">{{ plant.clima }}</td>
@@ -27,7 +27,11 @@
       </tbody>
     </table>
   </div>
-  <div class="row mt-4 pt-5">
+  <div class="row">
+    <p class="mb-0" *ngIf="totalInterior">Total de plantas de interior: {{ totalInterior }}</p>
+    <p *ngIf="totalExterior">Total de plantas de exterior: {{ totalExterior }}</p>
+  </div>
+  <div class="row pt-5">
     <div class="d-flex justify-content-center flex-row fw-bold text-shadow">
       <p class="me-2">Contact us:</p>
       <span><a class="text-dark text-decoration-none" href="tel:+573102105253">+57 310 2105253</a></span>
