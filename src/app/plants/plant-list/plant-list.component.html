@@ -1,21 +1,40 @@
-<div class="container mt-3">
-  <h2>Plant List</h2>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Nombre común</th>
-        <th>Tipo</th>
-        <th>Clima</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let plant of plants">
-        <td>{{ plant.id }}</td>
-        <td>{{ plant.nombre_comun }}</td>
-        <td>{{ plant.tipo }}</td>
-        <td>{{ plant.clima }}</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="container">
+  <div class="row">
+    <h2 class="text-capitalize text-shadow pb-4 mb-0">Vivero el otoño</h2>
+    <hr class="hr__border-bottom primary">
+  </div>
+  <div class="row">
+    <img src="assets/image_2.png" class="img-fluid w-100" alt="Heroe image - Alt">
+    <hr class="mt-3 mb-4">
+  </div>
+  <div class="row text-shadow">
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th>#</th>
+          <th>Nombre común</th>
+          <th>Tipo</th>
+          <th>Clima</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="tr__border-bottom" *ngFor="let plant of plants">
+          <td class="px-4">{{ plant.id }}</td>
+          <td class="px-4">{{ plant.nombre_comun }}</td>
+          <td class="px-4">{{ plant.tipo }}</td>
+          <td class="px-4">{{ plant.clima }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row mt-4 pt-5">
+    <div class="d-flex justify-content-center flex-row fw-bold text-shadow">
+      <p class="me-2">Contact us:</p>
+      <span><a class="text-dark text-decoration-none" href="tel:+573102105253">+57 310 2105253</a></span>
+      <span class="mx-1"> - </span>
+      <span><a class="text-dark text-decoration-none" href="mailto:info@viveroelotonio.com">info@viveroelotonio.com</a></span>
+      <span class="mx-1"> - </span>
+      <span><a class="text-dark text-decoration-none" href="https://www.instagram.com/64viveroelotonio" target="_blank" rel="noopener noreferrer">@viveroelotonio</a></span>
+    </div>
+  </div>
 </div>

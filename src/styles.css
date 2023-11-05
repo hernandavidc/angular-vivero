@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bs-body-font-family: 'Inter', sans-serif;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+}
+
+h2{
+  font-family: 'Kaisei Decol', sans-serif;
+  font-size: 36px;
+}
+.text-shadow{
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.box-shadow{
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.hr__border-bottom, .tr__border-bottom{
+  border-bottom: 2px solid rgba(0, 0, 0, 0.20);
+}
+.tr__border-bottom:last-child, .tr__border-bottom:last-child td{
+  border: none;
+}
+hr.primary{
+  margin-bottom: 42px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.table{
+  width: max-content;
+}
+.table-dark tr th{
+  background-color: #333A40;
+  box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.25);
+}
