@@ -44,6 +44,8 @@ describe('PlantListComponent', () => {
   });
 
   it('should call getPlants on init', () => {
+    component.ngOnInit();
+    fixture.detectChanges();
     expect(plantService.getPlants).toHaveBeenCalled();
   });
 
