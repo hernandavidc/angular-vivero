@@ -53,4 +53,11 @@ describe('PlantListComponent', () => {
     const tableRows = fixture.nativeElement.querySelectorAll('tbody tr');
     expect(tableRows.length).toBe(3);
   });
+
+  it('should calculate total interior and exterior plants correctly', () => {
+    component.ngOnInit();
+    fixture.detectChanges();
+    expect(component.totalInterior).toBe(2);
+    expect(component.totalExterior).toBe(1);
+  });
 });
