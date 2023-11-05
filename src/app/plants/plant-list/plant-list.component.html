@@ -1,0 +1,21 @@
+<div class="container mt-3">
+  <h2>Plant List</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre común</th>
+        <th>Tipo</th>
+        <th>Clima</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let plant of plants">
+        <td>{{ plant.id }}</td>
+        <td>{{ plant.nombre_comun }}</td>
+        <td>{{ plant.tipo }}</td>
+        <td>{{ plant.clima }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

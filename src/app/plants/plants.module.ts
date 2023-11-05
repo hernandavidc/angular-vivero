@@ -1,11 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PlantsComponent } from './plants.component';
+import { HttpClientModule } from '@angular/common/http';
+
+import { PlantService } from './plants.service';
+import { PlantListComponent } from './plant-list/plant-list.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule,
   ],
-  declarations: [PlantsComponent]
+  declarations: [
+    PlantListComponent,
+  ],
+  providers: [PlantService],
+  exports: [
+    PlantListComponent,
+  ]
 })
 export class PlantsModule { }
