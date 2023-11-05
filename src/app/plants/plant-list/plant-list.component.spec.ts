@@ -13,7 +13,6 @@ describe('PlantListComponent', () => {
   let component: PlantListComponent;
   let fixture: ComponentFixture<PlantListComponent>;
   let plantService: PlantService;
-  let template: DebugElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -38,8 +37,6 @@ describe('PlantListComponent', () => {
     fixture = TestBed.createComponent(PlantListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-
-    template = fixture.debugElement;
   });
 
   it('should create', () => {
@@ -48,5 +45,12 @@ describe('PlantListComponent', () => {
 
   it('should call getPlants on init', () => {
     expect(plantService.getPlants).toHaveBeenCalled();
+  });
+
+  it('should display a table with three rows of plants', () => {
+    component.ngOnInit();
+    fixture.detectChanges();
+    const tableRows = fixture.nativeElement.querySelectorAll('tbody tr');
+    expect(tableRows.length).toBe(3);
   });
 });
